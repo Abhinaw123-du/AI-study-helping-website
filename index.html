@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Study Notes Maker</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="javascript.js"></script>
+</script></noscript>
+</script> ?>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>📚 Smart Notes Maker</h1>
+            <p>Apne chapter ki images upload karein aur AI se ready-to-read notes payein.</p>
+        </header>
+
+        <div class="upload-section" id="drop-area">
+            <div class="icon">📁</div>
+            <p>Chapter ki images yahan drag karein ya <strong>Browse</strong> par click karein</p>
+            <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+            <button class="btn-primary" onclick="document.getElementById('fileElem').click()">Select Images</button>
+        </div>
+
+        <div id="gallery"></div>
+
+        <div class="action-area">
+            <button class="btn-generate" onclick="generateNotes()">Create Summary & Notes ✨</button>
+        </div>
+
+        <div id="output-notes" class="notes-display" style="display:none;">
+            <h2>📝 Aapke Notes:</h2>
+            <div id="notes-content">
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
