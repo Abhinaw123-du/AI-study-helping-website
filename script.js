@@ -1,5 +1,7 @@
 // Ye line ab Vercel se key legi, code mein key likhne ki zarurat nahi
 const API_KEY = window.env?.NEXT_PUBLIC_GEMINI_KEY || "AIzaSyBhXCvtgxTOTuwd7_RHRYx7_FgstFY9ifQ";
+// Is URL ko replace karein
+const url = `https://corsproxy.io/?https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
 // 2. Files handle karne ke liye function (Image Preview)
 function handleFiles(files) {
     const gallery = document.getElementById('gallery');
@@ -85,3 +87,4 @@ async function generateNotes() {
     }
 
 }
+
