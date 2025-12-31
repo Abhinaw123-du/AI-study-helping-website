@@ -1,6 +1,5 @@
-// 1. Apni API Key yahan sahi se rakhein
-const API_KEY = "AIzaSyBhXCvtgxTOTuwd7_RHRYx7_FgstFY9ifQ"; 
-
+// Ye line ab Vercel se key legi, code mein key likhne ki zarurat nahi
+const API_KEY = window.env?.NEXT_PUBLIC_GEMINI_KEY || "AIzaSyBhXCvtgxTOTuwd7_RHRYx7_FgstFY9ifQ";
 // 2. Files handle karne ke liye function (Image Preview)
 function handleFiles(files) {
     const gallery = document.getElementById('gallery');
@@ -84,4 +83,5 @@ async function generateNotes() {
         console.error("Connection Error:", error);
         content.innerHTML = "❌ Connection Error! Internet check karein ya Console mein error dekhein.";
     }
+
 }
